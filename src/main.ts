@@ -11,11 +11,13 @@ import 'virtual:svg-icons-register'
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 //引入自定义插件对象:注册整个项目全局组件
 import gloalComponent from '@/components'
+import router from './router';
 
 const app = createApp(App)
 app.use(ElementPlus, {
     locale: zhCn
 })
 //安装自定义插件
+app.use(router)
 app.use(gloalComponent)
 app.mount('#app')
